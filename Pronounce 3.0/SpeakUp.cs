@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,22 +13,29 @@ namespace Pronounce_3._0
     class SpeakUp
     {
         private string language;
-        private SpeechSynthesizer synth;
-        public SpeakUp(String lang)
+        private SpeechSynthesizer synth = new SpeechSynthesizer();
+        public SpeakUp(string lang)
         {
             this.language = lang;
+          //  synth = new SpeechSynthesizer();
         }
 
-        public async void speak(string text)
+        public SpeakUp()
+        {
+
+            //synth = new SpeechSynthesizer();
+        }
+
+        public async void speak(string text, string lang)
         {
             // Initialize the SpeechSynthesizer object.
-            synth = new SpeechSynthesizer();
+            this.language = lang;
             IEnumerable<VoiceInformation> voices = from voice in InstalledVoices.All
                              where voice.Language == "en-US"
                              select voice;
             switch (language)
             {
-                case "french":
+                case "france":
                     if (isLanguageInstalled("fr-FR")) {
                     // Query for a voice that speaks French.
                     voices = from voice in InstalledVoices.All
@@ -36,7 +44,7 @@ namespace Pronounce_3._0
                     }
                     else
                     {
-                        voiceNotFoundMessage();
+                       // voiceNotFoundMessage();
                     }
                     break;
 
@@ -85,8 +93,11 @@ namespace Pronounce_3._0
            
             // Set the voice as identified by the query.
             synth.SetVoice(voices.ElementAt(0));
-
-            await synth.SpeakTextAsync(text);
+            try { await synth.SpeakTextAsync(text); }
+            catch(Exception e){
+                Debug.WriteLine("Hey");
+            }
+            
         }
 
         private Boolean isLanguageInstalled(String lang_code)
@@ -112,6 +123,14 @@ namespace Pronounce_3._0
                 MessageBox.Show("No caption, one button.");
             }
 
+           
+        }
+
+        public void cleanAll()
+        {
+            if (synth != null) { 
+                synth.CancelAll(); 
+            }
            
         }
     }
