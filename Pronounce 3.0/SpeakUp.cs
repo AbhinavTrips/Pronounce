@@ -17,18 +17,15 @@ namespace Pronounce_3._0
         public SpeakUp(string lang)
         {
             this.language = lang;
-          //  synth = new SpeechSynthesizer();
         }
 
         public SpeakUp()
         {
 
-            //synth = new SpeechSynthesizer();
         }
 
         public async void speak(string text, string lang)
         {
-            // Initialize the SpeechSynthesizer object.
             this.language = lang;
             IEnumerable<VoiceInformation> voices = from voice in InstalledVoices.All
                              where voice.Language == "en-US"
@@ -44,7 +41,7 @@ namespace Pronounce_3._0
                     }
                     else
                     {
-                       // voiceNotFoundMessage();
+                        voiceNotFoundMessage();
                     }
                     break;
 
@@ -95,7 +92,7 @@ namespace Pronounce_3._0
             synth.SetVoice(voices.ElementAt(0));
             try { await synth.SpeakTextAsync(text); }
             catch(Exception e){
-                Debug.WriteLine("Hey");
+               // Debug.WriteLine("Hey");
             }
             
         }
@@ -115,12 +112,12 @@ namespace Pronounce_3._0
         private void  voiceNotFoundMessage()
         {
             MessageBoxResult result =
-      MessageBox.Show("The selected language is not installed on your phone. Would you like to install it?",
-      "Language not installed!", MessageBoxButton.OKCancel);
+      MessageBox.Show("The selected language is not installed on your phone.\nPlease install this language from \"Settings>language\" on your phone.\nNow speaking in US accent!",
+      "Language not installed!", MessageBoxButton.OK);
 
             if (result == MessageBoxResult.OK)
             {
-                MessageBox.Show("No caption, one button.");
+                //do something, may be launch settings page
             }
 
            

@@ -13,13 +13,14 @@ namespace Pronounce_3._0
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        int[] langBool;
+        string blankMessage;
         SpeakUp speaker;
         // Constructor
         public MainPage()
         {
             InitializeComponent();
             speaker = new SpeakUp();
+            blankMessage = "Please put a word in the box to know its correct pronunciation";
            
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
@@ -51,7 +52,7 @@ namespace Pronounce_3._0
             if (toSpeak.ToUpper() == toSpeak)
             {
                 speaker.cleanAll();
-                speaker.speak("Hey", country);
+                speaker.speak(blankMessage, country);
             }
             else
             {
