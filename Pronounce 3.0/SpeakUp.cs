@@ -36,6 +36,7 @@ namespace Pronounce_3._0
                     }
                     else
                     {
+                        voiceNotFoundMessage();
                     }
                     break;
 
@@ -49,6 +50,7 @@ namespace Pronounce_3._0
                     }
                     else
                     {
+                        voiceNotFoundMessage();
                     }
                     break;
 
@@ -62,6 +64,7 @@ namespace Pronounce_3._0
                     }
                     else
                     {
+                        voiceNotFoundMessage();
                     }
                     break;
 
@@ -75,6 +78,7 @@ namespace Pronounce_3._0
                     }
                     else
                     {
+                        voiceNotFoundMessage();
                     }
                     break;
             }
@@ -112,4 +116,3 @@ namespace Pronounce_3._0
         }
     }
 }
-
