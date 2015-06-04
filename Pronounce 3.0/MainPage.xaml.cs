@@ -13,29 +13,45 @@ namespace Pronounce_3._0
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        int[] langBool;
+        SpeakUp speaker;
         // Constructor
         public MainPage()
         {
             InitializeComponent();
-
+            langBool = new int[4];
+            speaker = new SpeakUp();
+           
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
 
-        // Sample code for building a localized ApplicationBar
-        //private void BuildLocalizedApplicationBar()
-        //{
-        //    // Set the page's ApplicationBar to a new instance of ApplicationBar.
-        //    ApplicationBar = new ApplicationBar();
+        private void button_in_Click(object sender, RoutedEventArgs e)
+        {
 
-        //    // Create a new button and set the text value to the localized string from AppResources.
-        //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
-        //    appBarButton.Text = AppResources.AppBarButtonText;
-        //    ApplicationBar.Buttons.Add(appBarButton);
+            // speaker = new SpeakUp();
+            string toSpeak = pronounce_box.Text;
+            speaker.cleanAll();
+            speaker.speak(toSpeak, "india");
+        }
 
-        //    // Create a new menu item with the localized string from AppResources.
-        //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
-        //    ApplicationBar.MenuItems.Add(appBarMenuItem);
-        //}
+        private void button_fr_Click(object sender, RoutedEventArgs e)
+        {
+            string toSpeak = pronounce_box.Text;
+            speaker.cleanAll();
+            speaker.speak(toSpeak, "france");
+        }
+
+        private void button_uk_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_usa_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+       
     }
 }

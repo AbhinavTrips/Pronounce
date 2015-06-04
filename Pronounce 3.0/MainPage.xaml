@@ -51,10 +51,10 @@
         <TextBox HorizontalAlignment="Left" Height="87" TextWrapping="Wrap" Text=" by DA-Developers" VerticalAlignment="Top" Width="330" Margin="164,0,-14,0" Grid.RowSpan="2" FontSize="20" Background="#FF1256B8" BorderBrush="#FF1256B8" Foreground="White" Padding="0,17,2,2"/>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="87" Grid.RowSpan="2" Width="480"/>
         <TextBox x:Name="pronounce_box" HorizontalAlignment="Left" Height="72" TextWrapping="Wrap" VerticalAlignment="Top" Width="460" Margin="10,90,0,0" Grid.Row="1" BorderBrush="#FF1256B8"/>
-        <Button x:Name="button_fr" Content="France" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="320,162,0,0" Grid.Row="1" BorderBrush="#FF1256B8" Width="148" Foreground="#DE000000" Background="White"/>
-        <Button x:Name="button_in" Content="India" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="186,162,0,0" Grid.Row="1" BorderBrush="#FF1256B8" Width="148" Foreground="#DE000000" Background="White"/>
-        <Button x:Name="button_uk" Content="UK" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="186,218,0,0" Grid.Row="1" BorderBrush="#FF1256B8" Width="148" Foreground="#DE000000" Background="White"/>
-        <Button x:Name="button_usa" Content="USA" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="320,218,0,0" Grid.Row="1" BorderBrush="#FF1256B8" Width="148" Foreground="#DE000000" Background="White"/>
+        <Button x:Name="button_fr" Content="France" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="320,162,0,0" Grid.Row="1" BorderBrush="#FF1256B8" Width="148" Foreground="#DE000000" Background="White" Click="button_fr_Click"/>
+        <Button x:Name="button_in" Content="India" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="186,162,0,0" Grid.Row="1" BorderBrush="#FF1256B8" Width="148" Foreground="#DE000000" Background="White" Click="button_in_Click"/>
+        <Button x:Name="button_uk" Content="UK" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="186,218,0,0" Grid.Row="1" BorderBrush="#FF1256B8" Width="148" Foreground="#DE000000" Background="White" Click="button_uk_Click"/>
+        <Button x:Name="button_usa" Content="USA" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="320,218,0,0" Grid.Row="1" BorderBrush="#FF1256B8" Width="148" Foreground="#DE000000" Background="White" Click="button_usa_Click"/>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are
             aligned on common boundaries.  The image has a top margin of -32px to
