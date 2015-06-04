@@ -19,7 +19,6 @@ namespace Pronounce_3._0
         public MainPage()
         {
             InitializeComponent();
-            langBool = new int[4];
             speaker = new SpeakUp();
            
             // Sample code to localize the ApplicationBar
@@ -28,30 +27,38 @@ namespace Pronounce_3._0
 
         private void button_in_Click(object sender, RoutedEventArgs e)
         {
-
-            // speaker = new SpeakUp();
-            string toSpeak = pronounce_box.Text;
-            speaker.cleanAll();
-            speaker.speak(toSpeak, "india");
+            callSpeaker("india");
         }
 
         private void button_fr_Click(object sender, RoutedEventArgs e)
         {
-            string toSpeak = pronounce_box.Text;
-            speaker.cleanAll();
-            speaker.speak(toSpeak, "france");
+            callSpeaker("france");
         }
 
         private void button_uk_Click(object sender, RoutedEventArgs e)
         {
-
+            callSpeaker("uk");
         }
 
         private void button_usa_Click(object sender, RoutedEventArgs e)
         {
-
+            callSpeaker("us");
         }
-
-       
+        
+        private void callSpeaker(string country)
+        {
+            string toSpeak = pronounce_box.Text;
+            if (toSpeak.ToUpper() == toSpeak)
+            {
+                speaker.cleanAll();
+                speaker.speak("Hey", country);
+            }
+            else
+            {
+                speaker.cleanAll();
+                speaker.speak(toSpeak, country);
+            }
+            
+        }
     }
 }
