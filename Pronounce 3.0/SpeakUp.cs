@@ -89,7 +89,7 @@ namespace Pronounce_3._0
             }
            
             // Set the voice as identified by the query.
-            synth.SetVoice(voices.ElementAt(0));
+            synth.SetVoice(voices.ElementAt(1));
             try { await synth.SpeakTextAsync(text); }
             catch(Exception e){
                // Debug.WriteLine("Hey");
