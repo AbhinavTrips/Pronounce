@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Pronounce_3._0.Resources;
+using Microsoft.Phone.Tasks;
 
 namespace Pronounce_3._0
 {
@@ -60,6 +61,32 @@ namespace Pronounce_3._0
                 speaker.speak(toSpeak, country);
             }
             
+        }
+
+        private void bar_rate_Click(object sender, EventArgs e)
+        {
+            MarketplaceReviewTask marketplaceReviewTask = new MarketplaceReviewTask();
+            marketplaceReviewTask.Show();
+
+        }
+
+        private void bar_help_Click(object sender, EventArgs e)
+        {
+            String message = "Pronounce teaches you correct pronunciation of words in different accents.\nYou just need to type the word in the box and click the desired button with country name on it.\n\nPlease RATE the app if you liked it or give your suggestion by clicking feedback button at the bottom of the screen.";
+            MessageBoxResult result =
+      MessageBox.Show(message,
+      "Help", MessageBoxButton.OK);
+        }
+
+        private void bar_feedback_Click(object sender, EventArgs e)
+        {
+            String sub = "Pronounce feedback/suggestions";
+            String rec = "abhinavtripathi01@hotmail.com";
+            String body = "Please enter your suggestions here.";
+            String cc = "";
+            String bcc = "";
+
+            EMailLauncher.mailLaunch(sub, body, rec, cc, bcc);
         }
     }
 }

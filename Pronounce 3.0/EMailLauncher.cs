@@ -9,7 +9,7 @@ namespace Pronounce_3._0
 {
     class EMailLauncher
     {
-        public void mailLaunch(String subject, String msgBody, String recipientAddress, String cc, String bcc)
+        public static void mailLaunch(String subject, String msgBody, String recipientAddress, String cc, String bcc)
         {
             EmailComposeTask emailComposeTask = new EmailComposeTask();
 

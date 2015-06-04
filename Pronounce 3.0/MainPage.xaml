@@ -66,9 +66,9 @@
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="False" BackgroundColor="#FF1256B8" ForegroundColor="White">
-            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/favs.png" Text="rate"/>
-            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar1/questionmark.png" Text="help"/>
-            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar2/edit.png" Text="review"/>
+            <shell:ApplicationBarIconButton x:Name="bar_rate" IconUri="/Assets/AppBar/favs.png" Text="rate/review" Click="bar_rate_Click"/>
+            <shell:ApplicationBarIconButton x:Name="bar_help" IconUri="/Assets/AppBar1/questionmark.png" Text="help" Click="bar_help_Click"/>
+            <shell:ApplicationBarIconButton x:Name="bar_feedback" IconUri="/Assets/AppBar/feature.email.png" Text="feeddback" Click="bar_feedback_Click"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>
