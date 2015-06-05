@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="ac1bf1ed-81db-4f67-9717-fd942317a9b4" Publisher="CN=abhinav" Version="1.0.0.0" />
+  <Identity Name="7848DA-Developers.Pronounce2.0" Publisher="CN=DFD6504A-7304-4BFC-91A8-A0E41AF46712" Version="1.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="e9a2ccf5-ef73-43ac-9541-4f51a6be08ea" PhonePublisherId="22579372-de88-4f95-8daa-675562782dbf" />
   <Properties>
-    <DisplayName>Pronounce 3.0</DisplayName>
-    <PublisherDisplayName>abhinav</PublisherDisplayName>
+    <DisplayName>Pronounce</DisplayName>
+    <PublisherDisplayName>DA-Developers</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -16,7 +16,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="AGHost.exe" EntryPoint="MainPage.xaml">
-      <m3:VisualElements DisplayName="Pronounce 3.0" Square150x150Logo="Assets\SquareTile150x150.png" Square44x44Logo="Assets\Logo.png" Description="Pronounce 3.0" ForegroundText="light" BackgroundColor="#464646">
+      <m3:VisualElements DisplayName="Pronounce 2.0" Square150x150Logo="Assets\SquareTile150x150.png" Square44x44Logo="Assets\Logo.png" Description="Pronounce teaches correct pronunciation in different accents." ForegroundText="light" BackgroundColor="#464646" ToastCapable="false">
         <m3:DefaultTile Square71x71Logo="Assets\SquareTile71x71.png">
         </m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />

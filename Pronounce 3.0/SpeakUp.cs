@@ -112,7 +112,7 @@ namespace Pronounce_3._0
         private void  voiceNotFoundMessage()
         {
             MessageBoxResult result =
-      MessageBox.Show("The selected language is not installed on your phone.\nPlease install this language from \"Settings>language\" on your phone.\nNow speaking in US accent!",
+      MessageBox.Show("The selected language is not installed on your phone.\nPlease install this language from \"Settings>language\" on your phone.\n\nNow speaking in US accent!",
       "Language not installed!", MessageBoxButton.OK);
 
             if (result == MessageBoxResult.OK)

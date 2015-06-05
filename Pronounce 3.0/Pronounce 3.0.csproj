@@ -145,9 +145,8 @@
     <Content Include="Assets\BadgeLogo.png" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\SplashScreen.png" />
-    <Content Include="Assets\SquareTile150x150.png" />
-    <Content Include="Assets\SquareTile71x71.png" />
-    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\SquareTile150X150.png" />
+    <Content Include="Assets\SquareTile71X71.png" />
     <Content Include="Assets\WideLogo.png" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -164,6 +163,7 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Logo300X300.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ResourceCustom.resx">
